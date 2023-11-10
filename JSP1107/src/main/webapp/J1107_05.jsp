@@ -12,6 +12,7 @@
 			td{width:150px; height:40px;}
 		</style>
 	</head>
+	
 	<body>
 		<%request.setCharacterEncoding("UTF-8");%>
 		<jsp:useBean id="score1" class="com.java.www.Stuscore"/>
