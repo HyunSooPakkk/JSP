@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<%request.setCharacterEncoding("UTF-8");%>
-		<jsp:useBean id="score1" class="com.java.www.dao.Stuscore"/>
+		<jsp:useBean id="score1" class="com.java.www.Stuscore"/>
 		<jsp:setProperty name="score1" property="*" />
 		<h1>학생성적프로그램</h1>
 		<table>

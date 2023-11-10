@@ -7,7 +7,7 @@
 	<title>useBean</title>
 	</head>
 	<body>
-		<jsp:useBean id="score1" class="com.java.www.dao.Stuscore" scope="page"/>
+		<jsp:useBean id="score1" class="com.java.www.Stuscore" scope="page"/>
 		<jsp:setProperty name="score1" property="stuNum" value="1"/>
 		<jsp:setProperty name="score1" property="name" value="홍길동"/>
 		<jsp:setProperty name="score1" property="kor" value="100"/>
