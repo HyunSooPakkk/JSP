@@ -7,6 +7,7 @@
 		<title>로그아웃</title>
 	</head>
 	<body>
+	
 	   <% session.invalidate(); %>
 	   <script>
 	      alert("로그아웃 되었습니다.");
