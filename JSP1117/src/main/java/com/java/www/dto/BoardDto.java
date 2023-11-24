@@ -4,20 +4,33 @@ import java.sql.Timestamp;
 
 public class BoardDto {
 	public BoardDto() {}
-	public BoardDto(String btitle, String bcontent, String id, String bfile) {
+	public BoardDto(String btitle, String bcont, String id, String bfile) {
 		this.btitle = btitle;
 		this.bcont = bcont;
 		this.id = id;
 		this.bfile = bfile;
 	}
-	public BoardDto(int bno, String btitle, String bcontent, String id, String bfile) {
+	
+	
+	public BoardDto(String btitle, String bcont, String id, int bgroup, int bstep, int bindent, String bfile) {
+		super();
+		this.btitle = btitle;
+		this.bcont = bcont;
+		this.id = id;
+		this.bgroup = bgroup;
+		this.bstep = bstep;
+		this.bindent = bindent;
+		this.bfile = bfile;
+	}
+	
+	public BoardDto(int bno, String btitle, String bcont, String id, String bfile) {
 		this.bno = bno;
 		this.btitle = btitle;
 		this.bcont = bcont;
 		this.id = id;
 		this.bfile = bfile;
 	}
-	public BoardDto(int bno, String btitle, String bcontent, Timestamp bdate, String id, int bgroup, int bstep,
+	public BoardDto(int bno, String btitle, String bcont, Timestamp bdate, String id, int bgroup, int bstep,
 			int bindent, int bhit, String bfile) {
 		this.bno = bno;
 		this.btitle = btitle;
@@ -53,10 +66,10 @@ public class BoardDto {
 	public void setBtitle(String btitle) {
 		this.btitle = btitle;
 	}
-	public String getBcontent() {
+	public String getBcont() {
 		return bcont;
 	}
-	public void setBcontent(String bcont) {
+	public void setBcont(String bcont) {
 		this.bcont = bcont;
 	}
 	public Timestamp getBdate() {
