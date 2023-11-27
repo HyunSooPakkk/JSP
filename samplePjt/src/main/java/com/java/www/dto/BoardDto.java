@@ -6,18 +6,18 @@ public class BoardDto {
 	
 	public BoardDto() {}
 	
-	public BoardDto(String btitle, String bcontent, String id, String bfile) {
+	public BoardDto(String btitle, String bcont, String id, String bfile) {
 		this.btitle = btitle;
-		this.bcontent = bcontent;
+		this.bcont = bcont;
 		this.id = id;
 		this.bfile = bfile;
 	}
 
-	public BoardDto(int bno, String btitle, String bcontent, Timestamp bdate, String id, int bgroup, int bstep,
+	public BoardDto(int bno, String btitle, String bcont, Timestamp bdate, String id, int bgroup, int bstep,
 			int bindent, int bhit, String bfile) {
 		this.bno = bno;
 		this.btitle = btitle;
-		this.bcontent = bcontent;
+		this.bcont = bcont;
 		this.bdate = bdate;
 		this.id = id;
 		this.bgroup = bgroup;
@@ -27,9 +27,21 @@ public class BoardDto {
 		this.bfile = bfile;
 	}
 
+	public BoardDto(String btitle, String bcont, String id, int bgroup, int bstep, int bindent, String bfile) {
+		
+		this.btitle = btitle;
+		this.bcont = bcont;
+		this.id = id;
+		this.bgroup = bgroup;
+		this.bstep = bstep;
+		this.bindent = bindent;
+		this.bfile = bfile;
+		
+	}
+
 	private int bno;
 	private String btitle;
-	private String bcontent;
+	private String bcont;
 	private Timestamp bdate;
 	private String id;
 	private int bgroup;
@@ -54,12 +66,12 @@ public class BoardDto {
 		this.btitle = btitle;
 	}
 
-	public String getBcontent() {
-		return bcontent;
+	public String getBcont() {
+		return bcont;
 	}
 
-	public void setBcontent(String bcontent) {
-		this.bcontent = bcontent;
+	public void setBcont(String bcont) {
+		this.bcont = bcont;
 	}
 
 	public Timestamp getBdate() {
