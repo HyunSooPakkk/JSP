@@ -6,6 +6,7 @@
 <html>
 	<head>
 	    
+	    
 		<meta charset="UTF-8">
 		<title>게시판</title>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>

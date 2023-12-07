@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<title>답글 달기 - doBReply</title>
 	</head>
+	
 	<body>
 	   <script>
 	      alert("답글이 저장되었습니다.");

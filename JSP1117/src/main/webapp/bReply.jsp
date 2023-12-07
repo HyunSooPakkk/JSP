@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	
 		<meta charset="UTF-8">
 		<title>답글달기</title>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
