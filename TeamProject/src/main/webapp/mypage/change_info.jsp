@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 <!--header start-->
 	<div style="width:100%;">
-	<iframe src="header_지원.jsp" frameborder="0" scrolling="no" width="100%" height="290px" style="margin:auto;"></iframe>
+	<iframe src="header.jsp" frameborder="0" scrolling="no" width="100%" height="290px" style="margin:auto;"></iframe>
   	</div>
 <!--header end-->
 	
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
 
 		<div class="memberbd">
-		<form name="m_frm" method="post" action="doM_info_update.do" >
+		<form name="m_frm" method="post" action="doM_info_update.do">
 			<input type="hidden" name="memberid" value="${mdto.memberid}">
 			<table summary="이름, 아이디, 비밀번호, 비밀번호 확인, 이메일, 이메일 수신여부, 주소, 휴대폰, 유선전화, 생년월일 순으로 회원가입 시 입력한 정보를 수정할 수 있습니다." class="memberWrite" border="1" cellspacing="0">
 			<caption>회원가입 정보 수정</caption>
@@ -91,7 +91,7 @@ $(document).ready(function() {
 			</colgroup>
 			<tbody>
 				<tr>
-					<th scope="row"><span style="font-family: 'JeonjuCraftGoR' !important;"> 이름 *</span></th>
+					<th scope="row"><span style="font-family: 'JeonjuCraftGoR' !important;">이름 *</span></th>
 					<td style="font-family: 'JeonjuCraftGoR' !important;">${mdto.nicname}</td>
 				</tr>
 				<tr>
@@ -332,7 +332,7 @@ $(document).ready(function() {
 
 <!--footer start-->
 	<div style="width:100%; height:100%; margin-top:70px;">
-	<iframe src="footer_지원.jsp" frameborder="0" scrolling="no" width="100%" height="500px" style="margin:auto;"></iframe>
+	<iframe src="footer.jsp" frameborder="0" scrolling="no" width="100%" height="500px" style="margin:auto;"></iframe>
   	</div>
 <!--footer end-->
 
