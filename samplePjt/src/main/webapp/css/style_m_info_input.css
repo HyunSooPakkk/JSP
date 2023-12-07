@@ -3,8 +3,6 @@
 * { margin: 0px; padding: 0px;}
 ul, ol{ list-style-type: none; }
 
-@charset "UTF-8";
-
 
 /* header */
 #nav_up {
@@ -528,7 +526,6 @@ input[type="checkbox"]:not(old):checked + label {
 #join_address_dl dd>input:nth-child(1) {
 	width: 180px; height: 30px;	
 }
-
 #join_address_dl dd>input:nth-child(3) {
 	width: 755px; height: 30px;
 	margin-top: 5px;	

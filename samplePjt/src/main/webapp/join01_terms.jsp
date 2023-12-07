@@ -1,29 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<script  src="http://code.jquery.com/jquery-latest.min.js"></script>		
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style_header.css">
 		<link rel="stylesheet" type="text/css" href="css/style_join01_terms.css">
 		<link rel="stylesheet" type="text/css" href="css/style_footer.css">
 		<title>회원가입 - 약관동의</title>
 		<script>
-			$(function(){
-				$("#memBtn").click(function(){
-					alert("다음으로 진행합니다.");
-					//alert("radio 개수 : "+$("input[type=radio]").length);
-					//alert("radio 체크개수 : "+$("input[type=radio]:checked").length);
-					//alert("radio버튼 체크된 개수 : "+$(".agree:checked").length);
-					if($(".agree:checked").length<3){
-						alert("모두 동의하셔야 다음으로 진행가능합니다.");
-						return false;
-					}
-					agreeFrm.submit();
-				});//memBtn
-			});//jquery
+		  $(function(){
+			 $("#memBtn").click(function(){
+				//alert("radio 개수 : "+$("input[type=radio]").length );
+				//alert("radio 체크개수 : "+$("input[type=radio]:checked").length );
+				//alert("agree 체크된 개수 : "+$(".agree:checked").length );
+				if($(".agree:checked").length<3){
+					alert("모두 동의하셔야 다음으로 진행가능합니다.");
+					return false;
+				}
+				
+				alert("다음으로 진행합니다.");
+				agreeFrm.submit();
+			 }); 
+		  });
 		</script>
 	</head>
 	<body>
@@ -56,10 +57,6 @@
 				</ul>
 			</nav>
 		</header>
-		
-		
-		
-		
 		
 		<section>
 			<form name="agreeFrm" method="post" action="join02_info_input.do">
@@ -165,7 +162,7 @@
 					</article>
 				</div>
 				<div class="agreeRadio">
-					<input type="radio" name="s_agree" id="s_agree" class="agree" value="agree" />
+					<input type="radio" name="s_agree" class="agree" id="s_agree" value="agree" />
 					<label for="s_agree">개인정보 보호를 위한 이용자 동의사항에 동의합니다.</label>
 					<input type="radio" name="s_agree" id="s_disagree" value="disagree" />
 					<label for="s_disagree">동의하지 않습니다.</label>
@@ -212,51 +209,7 @@
 			</form>
 		</section>
 		
+		<%@include file="footer.jsp" %>
 		
-		
-		
-		
-		
-		
-		<footer>
-			<div id="footer_wrap">
-				<div id="footer_cont">
-					<div id="fl_l">
-						<a href="#"></a>
-						<p>© COOKIT ALL RIGHTS RESERVED</p>
-					</div>
-					<div id="fl_c">
-						<ul>
-							<li><a href="#">이용약관</a></li>
-							<li><a href="#">개인정보처리 방침</a></li>
-							<li><a href="#">법적고지</a></li>
-							<li><a href="#">사업자정보 확인</a></li>
-						</ul>
-						<div id="fl_c_info">
-							<p>씨제이제일제당(주)</p>
-							<p>대표이사 : 손경식,강신호,신현재</p>
-							<p>사업자등록번호 : 104-86-09535</p>
-							<p>주소 : 서울 중구 동호로 330 CJ제일제당 센터 (우) 04560</p>
-							<p>통신판매업신고 중구 제 07767호</p>
-							<p>개인정보보호책임자 : 조영민</p>
-							<p>이메일 : cjon@cj.net</p>
-							<p>호스팅제공자 : CJ올리브네트웍스㈜</p>
-							<p>고객님은 안전거래를 위해 현금등으로 결제시 LG U+ 전자 결제의 매매보호(에스크로) 서비스를 이용하실 수 있습니다. <a href="#">가입 사실 확인</a></p>
-						</div>
-					</div>
-					<div id="fl_r">
-						<span>cj그룹계열사 바로가기 ▼</span>
-						<dl>
-							<dt>고객행복센터</dt>
-								<dd>1688-1920</dd>
-						</dl>
-						<a href="#">1:1문의</a>						
-					</div>
-				</div>
-			</div>
-		
-		
-		
-		</footer>
 	</body>
 </html>

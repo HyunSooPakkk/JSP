@@ -3,6 +3,7 @@
 	<name>samplePjt</name>
 	<comment></comment>
 	<projects>
+		<project>mybatisPjt</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

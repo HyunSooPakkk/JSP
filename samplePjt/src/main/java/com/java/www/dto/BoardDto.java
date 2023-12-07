@@ -5,19 +5,17 @@ import java.sql.Timestamp;
 public class BoardDto {
 	
 	public BoardDto() {}
-	
-	public BoardDto(String btitle, String bcont, String id, String bfile) {
+	public BoardDto(String btitle, String bcontent, String id, String bfile) {
 		this.btitle = btitle;
-		this.bcont = bcont;
+		this.bcontent = bcontent;
 		this.id = id;
 		this.bfile = bfile;
 	}
-
-	public BoardDto(int bno, String btitle, String bcont, Timestamp bdate, String id, int bgroup, int bstep,
+	public BoardDto(int bno, String btitle, String bcontent, Timestamp bdate, String id, int bgroup, int bstep,
 			int bindent, int bhit, String bfile) {
 		this.bno = bno;
 		this.btitle = btitle;
-		this.bcont = bcont;
+		this.bcontent = bcontent;
 		this.bdate = bdate;
 		this.id = id;
 		this.bgroup = bgroup;
@@ -27,21 +25,28 @@ public class BoardDto {
 		this.bfile = bfile;
 	}
 
-	public BoardDto(String btitle, String bcont, String id, int bgroup, int bstep, int bindent, String bfile) {
-		
+	public BoardDto(String btitle, String bcontent, String id, int bgroup, int bstep, int bindent,
+			String bfile) {
 		this.btitle = btitle;
-		this.bcont = bcont;
+		this.bcontent = bcontent;
 		this.id = id;
 		this.bgroup = bgroup;
 		this.bstep = bstep;
 		this.bindent = bindent;
 		this.bfile = bfile;
-		
+	}
+
+	public BoardDto(int bno, String btitle, String bcontent, String id, String bfile) {
+		this.bno = bno;
+		this.btitle = btitle;
+		this.bcontent = bcontent;
+		this.id = id;
+		this.bfile = bfile;
 	}
 
 	private int bno;
 	private String btitle;
-	private String bcont;
+	private String bcontent;
 	private Timestamp bdate;
 	private String id;
 	private int bgroup;
@@ -53,81 +58,64 @@ public class BoardDto {
 	public int getBno() {
 		return bno;
 	}
-
 	public void setBno(int bno) {
 		this.bno = bno;
 	}
-
 	public String getBtitle() {
 		return btitle;
 	}
-
 	public void setBtitle(String btitle) {
 		this.btitle = btitle;
 	}
-
-	public String getBcont() {
-		return bcont;
+	public String getBcontent() {
+		return bcontent;
 	}
-
-	public void setBcont(String bcont) {
-		this.bcont = bcont;
+	public void setBcontent(String bcontent) {
+		this.bcontent = bcontent;
 	}
-
 	public Timestamp getBdate() {
 		return bdate;
 	}
-
 	public void setBdate(Timestamp bdate) {
 		this.bdate = bdate;
 	}
-
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
 	public int getBgroup() {
 		return bgroup;
 	}
-
 	public void setBgroup(int bgroup) {
 		this.bgroup = bgroup;
 	}
-
 	public int getBstep() {
 		return bstep;
 	}
-
 	public void setBstep(int bstep) {
 		this.bstep = bstep;
 	}
-
 	public int getBindent() {
 		return bindent;
 	}
-
 	public void setBindent(int bindent) {
 		this.bindent = bindent;
 	}
-
 	public int getBhit() {
 		return bhit;
 	}
-
 	public void setBhit(int bhit) {
 		this.bhit = bhit;
 	}
-
 	public String getBfile() {
 		return bfile;
 	}
-
 	public void setBfile(String bfile) {
 		this.bfile = bfile;
 	}
 	
+	
+
 }

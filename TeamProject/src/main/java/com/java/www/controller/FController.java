@@ -40,22 +40,18 @@ public class FController extends HttpServlet {
 			response.sendRedirect("main.jsp");
 			break;
 		
-		case "/m_info_input.do": //회원정보수정 페이지를 열어주는 거 - 회원정보 1명 가져오기
+		case "/mypage/change_info.do": //회원정보수정 페이지를 열어주는 거 - 회원정보 1명 가져오기
 			service = new MSelectOneService();
 			service.execute(request, response);
-			url = "m_info_input.jsp";
+			url = "change_info.jsp";
 			break;
-		case "/doM_info_input.do": //회원정보수정
+			
+		case "/mypage/doM_info_update.do": //회원정보수정
 			service = new MUpdateService();
 			service.execute(request, response);
-			url = "doM_info_input.jsp";
+			url = "doM_info_update.jsp";
 			break;
-		case "/login.do":
-			response.sendRedirect("login.jsp");
-			break;
-		case "/logout.do":
-			response.sendRedirect("logout.jsp");
-			break;
+		
 		
 		
 		default:
@@ -75,11 +71,11 @@ public class FController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doGet");
 		doAction(request,response);
-	}
+	}//doGet
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost");
 		doAction(request,response);
-	}
+	}//doPost
 
 }

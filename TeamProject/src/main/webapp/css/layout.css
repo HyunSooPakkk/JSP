@@ -45,7 +45,7 @@ html{overflow-y:scroll; width:100%;}
 #gnb #top{max-width:900px; margin:41px auto 0;}
 #gnb #top:after {content:""; display:block; clear:both;}
 #gnb #top ul li{position:relative; float:left; background:url('../images/bg/bg_navi_l.gif') left top no-repeat;}
-#gnb #top ul li a{display:block; width:103px; height:42px; line-height:42px; font-size:14px; color:#fff; font-weight:600; text-align:center; background:url('../images/bg/bg_navi_r.gif') right top no-repeat;}
+#gnb #top ul li a{display:block; width:103px; height:42px; line-height:42px; font-size:19px; color:#fff; font-weight:600; text-align:center; background:url('../images/bg/bg_navi_r.gif') right top no-repeat; margin-top: 7px;}
 #gnb #top ul li a:hover{width:101px; height:41px; line-height:41px; background:url('../images/bg/bg_navi_upline.png') 50% bottom #4a4a4a no-repeat; border-top:1px #000 solid; border-left:1px #000 solid; border-right:1px #000 solid;}
 #gnb #top ul li a.hover{width:101px; height:41px; line-height:41px; background:url('../images/bg/bg_navi_upline.png') 50% bottom #4a4a4a no-repeat; border-top:1px #000 solid; border-left:1px #000 solid; border-right:1px #000 solid;}
 #gnb #top ul li ul{position:absolute; left:0; top:42px; width:204px; border-left:1px #000 solid; border-right:1px #000 solid; border-bottom:1px #000 solid; padding:24px 0 34px; background:url('../images/bg/bg_navi_line.png') -1px top #4a4a4a no-repeat; z-index:9999;}
@@ -54,8 +54,8 @@ html{overflow-y:scroll; width:100%;}
 #gnb #top ul li ul li a:hover{background:url(none) #7d7370; width:163px; height:24px; line-height:24px; border:0;}
 #gnb #top ul li ul li a.hover{background:url(none) #7d7370; width:163px; height:24px; line-height:24px; border:0;}
 
-#gnb #top ul li.brand{background:url('../images/bg/bg_navi_brand.gif') left top #ffc100 no-repeat;}
-#gnb #top ul li.brand a{width:178px; font-size:16px; background:url('../images/bg/bg_navi_brand_r.gif') right top no-repeat;}
+#gnb #top ul li.brand{background:url() left top #ffc100 no-repeat;}
+#gnb #top ul li.brand a{width:178px; font-size:19px; background:url() right top no-repeat; margin-top: 7px;}
 #gnb #top ul li.brand a:hover{width:176px; height:41px; line-height:41px; background:url('../images/bg/bg_navi_upline2.png') 50% bottom #4a4a4a no-repeat; border-top:1px #000 solid; border-left:1px #000 solid; border-right:1px #000 solid;}
 #gnb #top ul li.brand a.hover{width:176px; height:41px; line-height:41px; background:url('../images/bg/bg_navi_upline2.png') 50% bottom #4a4a4a no-repeat; border-top:1px #000 solid; border-left:1px #000 solid; border-right:1px #000 solid;}
 #gnb #top ul li.brand ul{position:absolute; left:0; top:42px; width:329px; border-left:1px #000 solid; border-right:1px #000 solid; border-bottom:1px #000 solid; padding:24px 0 34px; background:url('../images/bg/bg_navi_line2.png') -1px top #4a4a4a no-repeat;}
@@ -194,9 +194,9 @@ transition-property:transform, left, top; transition-duration:0s; transform:tran
 #footerWrap #footer #fnb{width:100%; background:#5a524c; overflow:hidden;}
 #footerWrap #footer #fnb ul{max-width:860px; padding:0 0 0 40px; margin:0 auto; border-left:1px #7b7470 solid; border-right:1px #7b7470 solid; overflow:hidden;}
 #footerWrap #footer #fnb ul li{float:left; height:43px; line-height:43px; padding:0 90px 0 0;}
-#footerWrap #footer #fnb ul li a{font-size:14px; color:#fff; font-weight:600;}
+#footerWrap #footer #fnb ul li a{font-size:16px; color:#fff; font-weight:600;}
 #footerWrap #footer #fnb ul li.brand{padding:0;}
-#footerWrap #footer #fnb ul li.brand a{color:#ff7100; font-size:14px;}
+#footerWrap #footer #fnb ul li.brand a{color:#ff7100; font-size:16px;}
 
 #footerWrap #footer #finfo{position:relative; max-width:500px; padding:30px 0; margin:0 auto; overflow:hidden;}
 #footerWrap #footer #finfo #flogo{float:left; padding:0px;}

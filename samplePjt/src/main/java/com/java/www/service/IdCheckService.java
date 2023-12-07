@@ -9,16 +9,12 @@ public class IdCheckService {
 		String result = null;
 		//dao접근
 		MemberDao mdao = new MemberDao();
-		MemberDto mdto = mdao.selectOne(id); 
+		MemberDto mdto = mdao.selectOne(id);
 		
-		if(mdto==null) result = "사용 가능";
-		else result = "사용 불가능";
+		if(mdto==null) result = "사용가능";
+		else result = "사용불가능";
 		
 		return result;
 	}
-	
-	
-	//dao접근
-	
-	
+
 }

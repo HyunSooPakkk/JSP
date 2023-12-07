@@ -11,7 +11,6 @@ public class MInsertService implements Service {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw1");
 		String name = request.getParameter("name");
@@ -21,21 +20,21 @@ public class MInsertService implements Service {
 		String phone = f_tell+"-"+m_tell+"-"+l_tell; //010-1111-1111
 		String gender = request.getParameter("gender");
 		String[] hobbys = request.getParameterValues("hobby");
-		String hobby = "";
+		String hobby="";
 		for(int i=0;i<hobbys.length;i++) {
 			if(i==0) hobby = hobbys[i];
 			else hobby += "," + hobbys[i];
-		}//for
+		}
 		
 		MemberDto mdto = new MemberDto(id, pw, name, phone, gender, hobby);
 		
-		//dao 접근
+		//dao접근 - insert
 		MemberDao mdao = new MemberDao();
 		int result = mdao.mInsert(mdto);
 		
-		//request에 담기
+		//request 추가
 		request.setAttribute("result", result);
 
 	}
 
-}//class
+}

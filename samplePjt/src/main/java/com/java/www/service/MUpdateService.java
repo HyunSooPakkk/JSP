@@ -12,7 +12,7 @@ public class MUpdateService implements Service {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
-		String id = (String)session.getAttribute("session_id");
+		String id = (String) session.getAttribute("session_id");
 		String pw = request.getParameter("pw1");
 		String name = request.getParameter("name");
 		String f_tell = request.getParameter("f_tell");
@@ -21,21 +21,20 @@ public class MUpdateService implements Service {
 		String phone = f_tell+"-"+m_tell+"-"+l_tell; //010-1111-1111
 		String gender = request.getParameter("gender");
 		String[] hobbys = request.getParameterValues("hobby");
-		String hobby = "";
+		String hobby="";
 		for(int i=0;i<hobbys.length;i++) {
 			if(i==0) hobby = hobbys[i];
 			else hobby += "," + hobbys[i];
-		}//for
+		}
 		
 		MemberDto mdto = new MemberDto(id, pw, name, phone, gender, hobby);
 		
-		//dao 접근
+		//dao접근 - update
 		MemberDao mdao = new MemberDao();
 		int result = mdao.mUpdate(mdto);
-				
-		//request에 담기
-		request.setAttribute("result", result);
 		
+		//request 추가
+		request.setAttribute("result", result);
 
 	}
 

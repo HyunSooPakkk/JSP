@@ -345,7 +345,7 @@
 .productList ul li span.img img{width:152px; height:152px;}
 .productList ul li span.name{font-size:13px; font-weight:600; color:#5a524c; text-align:center; line-height:1.3; padding:0 0 10px 0;}
 .productList ul li span.name a{color:#5a524c;}
-.productList ul li span.price{font-size:13px; font-weight:600; color:#888; text-align:center; line-height:1.3;}
+.productList ul li span.price{font-size:13px; color:#888; text-align:center; line-height:1.3;}
 
 /* EVENTLIST */
 .eventList{width:100%; margin:30px 0 0 0; border-bottom:1px #d9d9d9 solid; overflow:hidden;}
@@ -414,10 +414,10 @@
 .memberWrite th span{display:block; padding:0 0 0 10px;line-height:1.2;}
 .memberWrite th label{padding:0 0 0 10px;}
 .memberWrite td{border-color:#eaeaea;border-width:1px 0 0 0;padding:10px 0 10px 10px;text-align:left;border-style:solid none none none;color:#444;vertical-align:middle; word-break:keep-all;}
-.memberWrite td label{font-size:11px; color:#666; cursor:pointer; line-height:18px;}
+.memberWrite td label{font-size:12px; color:#666; cursor:pointer; line-height:18px;}
 .memberWrite td p{color:#727272; clear:both; line-height:1.2;}
 .memberWrite td .radio_t{width:13px;height:13px;margin:0 5px 2px 0;padding:0;}
-.memberWrite td .gray{color:#888;}
+.memberWrite td .gray{color:#727272; clear:both; line-height:1.2;}
 
 
 /* CHECK TABLE */
@@ -500,7 +500,7 @@
 .couponrDiv{width:100%; border-top:1px #c9c7c5 solid; margin:20px 0 0 0; overflow:hidden;}
 .orderTable{width:100%; border-width:0; border-spacing:0; border-style:none; font-size:14px;}
 .orderTable th{color:#444; vertical-align:middle; text-align:center; font-size:14px; font-weight:600; border-bottom:1px #5b524d solid; padding:10px 0; line-height:1.2;}
-.orderTable td{color:#888; vertical-align:middle; text-align:center; font-size:12px; font-weight:600; line-height:1.3; padding:20px 0; border-bottom:1px #d9d9d9 solid;}
+.orderTable td{color:#888; vertical-align:middle; text-align:center; font-size:12px; line-height:1.3; padding:20px 0; border-bottom:1px #d9d9d9 solid;}
 .orderTable td.left{padding:20px 10px; text-align:left; font-size:13px;}
 .orderTable td.right{padding:20px 10px; text-align:right; font-size:13px;}
 .orderTable td p.day{color:#888}
@@ -514,12 +514,12 @@
 .orderTable td ul.order li{float:left; padding:5px 0;}
 .orderTable td ul.goods{margin:0 0 0 80px;}
 .orderTable td ul.goods li{float:left; line-height:1.3;}
-.orderTable td a{color:#666; font-weight:600;}
+.orderTable td a{color:#666;}
 .orderTable td img{vertical-align:middle;}
 
 .orderTable2{width:100%; border-width:0; border-spacing:0; border-style:none; font-size:14px;}
-.orderTable2 th{color:#444; vertical-align:middle; text-align:center; font-size:14px; font-weight:600; border-bottom:1px #5b524d solid; padding:10px 0; line-height:1.2;}
-.orderTable2 td{color:#888; vertical-align:middle; text-align:center; font-size:12px; font-weight:600; line-height:1.3; padding:12px 0; border-bottom:1px #d9d9d9 solid;}
+.orderTable2 th{color:#444; vertical-align:middle; text-align:center; font-size:14px; border-bottom:1px #5b524d solid; padding:10px 0; line-height:1.2;}
+.orderTable2 td{color:#888; vertical-align:middle; text-align:center; font-size:12px; line-height:1.3; padding:12px 0; border-bottom:1px #d9d9d9 solid;}
 .orderTable2 td.left{padding:12px 10px; text-align:left; font-size:13px;}
 .orderTable2 td.right{padding:20px 10px; text-align:right; font-size:13px;}
 .orderTable2 td p.day{color:#888}
@@ -533,7 +533,7 @@
 .orderTable2 td ul.order li{float:left; padding:5px 0;}
 .orderTable2 td ul.goods{margin:0 0 0 80px;}
 .orderTable2 td ul.goods li{float:left; line-height:1.3;}
-.orderTable2 td a{color:#666; font-weight:600;}
+.orderTable2 td a{color:#666; font-weight:100;}
 .orderTable2 td img{vertical-align:middle;}
 
 .orderTable3{width:100%; border-width:0; border-spacing:0; border-style:none; font-size:13px;}
@@ -554,7 +554,7 @@
 .pta li.pt5{padding:5px 0 0 0; clear:both; float:none;}
 .pta li.cb{clear:both; padding-right:40px;}
 .pta li span.valign{line-height:20px;}
-.pta li span.mvalign{font-size:12px; font-weight:600; line-height:20px; color:#999;}
+.pta li span.mvalign{color:#727272; clear:both; line-height:1.2;}
 .pta li span.black{color:#5a524c; font-weight:normal;}
 .pta li span.orange{color:#ff7100; font-weight:normal;}
 .pta li label.star{padding:2px 20px 0 2px;}
@@ -681,9 +681,9 @@
 .nbtn:hover{color:#fff;}
 .gbtn{display:block; width:130px; height:40px; line-height:40px; background:#5b524d; color:#fff !important; font-size:14px; font-weight:600; text-align:center;}
 .gbtn:hover{color:#fff;}
-.nbtnMini{display:block; width:80px; height:20px; text-align:center; line-height:19px; background:#999; color:#fff !important; font-size:12px; font-weight:600;}
+.nbtnMini{display:block; width:80px; height:20px; text-align:center; line-height:19px; background:#999; color:#fff !important; font-size:12px; }
 .nbtnMini:hover{color:#fff; text-decoration:none;}
-.obtnMini{display:block; width:80px; height:20px; text-align:center; line-height:19px; background:#ff7100; color:#fff !important; font-size:12px; font-weight:600;}
+.obtnMini{display:block; width:80px; height:20px; text-align:center; line-height:19px; background:#ff7100; color:#fff !important; font-size:12px;}
 .obtnMini:hover{color:#fff; text-decoration:none;}
 
 
@@ -693,7 +693,7 @@
 .decidebtn:hover{color:#ff7100; text-decoration:none;}
 
 .addressBtn{display:block; height:20px; text-align:center; background:#999; color:#fff; font-size:12px; padding:0 10px 0 4px;}
-.addressBtn span{display:block; height:20px; line-height:19px; background:url('../images/ico/ico_address.gif') left 5px no-repeat; padding:0 0 0 17px;}
+.addressBtn span{display:block; width:80px; height:20px; line-height:19px; background:url('../images/ico/ico_address.gif') left 5px no-repeat; padding:0 0 0 17px; color:#fff !important; font-size:12px;}
 .addressBtn:hover{color:#fff; text-decoration:none;}
 .daybtn{display:block; width:43px; height:23px; line-height:21px; color:#777; font-weight:600; text-align:center; background:url('../images/btn/btn_daybtn.gif') left top no-repeat;}
 .daybtn:hover{color:#777;}

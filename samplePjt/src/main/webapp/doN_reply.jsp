@@ -4,12 +4,13 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>doN_reply</title>
+		<title>doN_insert.jsp</title>
 	</head>
 	<body>
-		<script>
-			alert("답글이 등록되었습니다.");
-			location.href="n_list.do";
-		</script>
+	   <script>
+	     alert("답글이 완료되었습니다.");
+	     location.href="n_list.do?page=${page}&category=${category}&sword=${sword}";
+	   </script>
+	
 	</body>
 </html>

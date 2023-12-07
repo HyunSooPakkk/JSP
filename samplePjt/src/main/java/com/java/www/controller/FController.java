@@ -13,11 +13,14 @@ import com.java.www.service.DoLoginService;
 import com.java.www.service.MInsertService;
 import com.java.www.service.MSelectOneService;
 import com.java.www.service.MUpdateService;
+import com.java.www.service.N_DeleteService;
 import com.java.www.service.N_InsertService;
 import com.java.www.service.N_ReplyInsertService;
 import com.java.www.service.N_SelectOneService;
+import com.java.www.service.N_UpdateService;
 import com.java.www.service.N_listSelectService;
 import com.java.www.service.Service;
+
 
 @WebServlet("*.do")
 public class FController extends HttpServlet {
@@ -27,15 +30,16 @@ public class FController extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String url = null;
 		Service service = null;
+		
 		//파일이름 추출
 		String uri = request.getRequestURI();
 		String cPath = request.getContextPath();
 		String fileName = uri.substring(cPath.length());
 		//파일호출 이름
-		System.out.println("파일호출 이름 : "+fileName);
+		System.out.println("FController 파일호출 이름 : "+fileName);
 		
 		//switch
-		switch(fileName) {
+		switch (fileName) {
 		case "/main.do":
 			response.sendRedirect("main.jsp");
 			break;
@@ -50,7 +54,7 @@ public class FController extends HttpServlet {
 			service.execute(request, response);
 			url = "join03_success.jsp";
 			break;
-		case "/m_info_input.do": //회원정보수정 페이지를 열어주는 거 - 회원정보 1명 가져오기
+		case "/m_info_input.do": //회원정보수정 페이지 - 회원정보 1명 가져오기
 			service = new MSelectOneService();
 			service.execute(request, response);
 			url = "m_info_input.jsp";
@@ -67,72 +71,86 @@ public class FController extends HttpServlet {
 			response.sendRedirect("logout.jsp");
 			break;
 		case "/doLogin.do":
-			//service호출
+			//Service호출
 			service = new DoLoginService();
 			service.execute(request, response);
-			url="doLogin.jsp";
+			url = "doLogin.jsp";
 			break;
 		case "/n_list.do":
-			//service호출
+			//Service호출
 			service = new N_listSelectService();
 			service.execute(request, response);
-			url="n_list.jsp";
+			url = "n_list.jsp";
 			break;
-		
 		case "/n_view.do":
-			//service호출
+			//Service호출
 			service = new N_SelectOneService();
 			service.execute(request, response);
-			url="n_view.jsp";
+			url = "n_view.jsp";
 			break;
-		
-		case "/n_insert.do":
+		case "/n_insert.do": //글쓰기
 			response.sendRedirect("n_insert.jsp");
-			break;
-			
+			break;	
 		case "/doN_insert.do":
-			//service호출
+			//Service호출
 			service = new N_InsertService();
 			service.execute(request, response);
-			url="doN_insert.jsp";
+			url = "doN_insert.jsp";
 			break;
-		
 		case "/n_reply.do":
-			//service호출
+			//Service호출
 			service = new N_SelectOneService();
 			service.execute(request, response);
-			url="n_reply.jsp";
+			url = "n_reply.jsp";
 			break;
-		
 		case "/doN_reply.do":
-			//service호출
+			//Service호출
 			service = new N_ReplyInsertService();
 			service.execute(request, response);
-			url="doN_reply.jsp";
+			url = "doN_reply.jsp";
 			break;
-		
+		case "/n_update.do":
+			//Service호출
+			service = new N_SelectOneService();
+			service.execute(request, response);
+			url = "n_update.jsp";
+			break;
+		case "/doN_update.do":
+			//Service호출
+			service = new N_UpdateService();
+			service.execute(request, response);
+			url = "doN_update.jsp";
+			break;
+		case "/n_delete.do":
+			//Service호출
+			service = new N_DeleteService();
+			service.execute(request, response);
+			url = "n_delete.jsp";
+			break;
+
 		default:
 			break;
 			
 		}//switch
 		
-		if(url != null) {
+		if(url!=null) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 			dispatcher.forward(request, response);
-		}//if
-	
+		}
+		
 		
 	}//doAction
-
-	//------
+	
+	
+	//-------
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doGet");
-		doAction(request,response);
+		doAction(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost");
-		doAction(request,response);
+		doAction(request, response);
 	}
 
 }

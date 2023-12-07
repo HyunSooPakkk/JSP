@@ -1,39 +1,71 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>COOKIT</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style_main.css">
+		<script>
+		   $(function(){
+			  $(".modal").click(function(){
+				  //alert("close");
+				  $(".modal").addClass("popOff");
+			  }); 
+		   });
+		</script>
+		<style>
+		.popOff{display:none;}
+        .modal{
+            position:fixed; top:0; left:0;
+            width:100%; height:100%;
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal_body{
+            position:absolute; top:25%; left:50%;  
+            width:400px; height:424px; 
+            padding:40px;  
+            text-align: center;
+
+            background:url('images/pop1.jpg');
+            background-size:100%;
+            /* background-color: rgb(255,255,255); */ 
+            border-radius:10px; 
+            box-shadow:0 2px 3px 0 rgba(34,36,38,0.15);  
+            transform:translateX(-50%); 
+        }
+    </style>
+		
 	</head>
 	<body>
+	    
 	 	<header>
-	 		<div id="nav_up">
+	 		<div id="nav_up" >
 	 			<ul>
-	 				<c:if test="${session_id == null }">
-	 				<li><a href="join01_terms.do">회원가입</a></li>
-	 				<li><a href="login.do">로그인</a></li>
-	 				</c:if>
-	 				<c:if test="${session_id != null }">
-	 				<li class="txtbold"><a href="m_info_input.do">${session_name}님</a></li>
-	 				<li><a href="logout.do">로그아웃</a></li>
-	 				</c:if>
+	 			    <c:if test="${session_id==null}">
+		 				<li><a href="join01_terms.do">회원가입</a></li>
+		 				<li><a href="login.do">로그인</a></li>
+	 			    </c:if>
+	 			    <c:if test="${session_id!=null}">
+		 				<li class="txtbold"><a href="m_info_input.do">${session_name}님</a></li>
+		 				<li><a href="logout.do">로그아웃</a></li>
+	 			    </c:if>
 	 				<li><a href="n_list.do">고객행복센터</a></li>
 	 				<li>배송정보검색</li>
 	 				<li>기프트카드 등록</li>
 	 			</ul>
 	 		</div>
 	 		<nav>
-	 			<h1></h1>
-	 			<ul>
-	 				<li>COOKIT소개</li>
-	 				<li>COOKIT메뉴</li>
-	 				<li>리뷰</li>
-	 				<li>이벤트</li>
-	 				<li>MY쿡킷</li>
+	 			<a href="main.do"><h1></h1></a>
+	 			<ul >
+	 				<li class="navFont">COOKIT소개</li>
+	 				<li class="navFont">COOKIT메뉴</li>
+	 				<li class="navFont">리뷰</li>
+	 				<li class="navFont">이벤트</li>
+	 				<li class="navFont">MY쿡킷</li>
 	 			</ul>
 	 			<ul>
 	 				<li><a href="#"><span>장바구니</span></a></li>
@@ -52,7 +84,7 @@
 			 			<span><span></span>3인분</span>
 			 			<span><span></span>조리 15분</span>
 	 				</a>
-	 				<span>16,800원<a href="#"></a></span>
+	 				<span>16,800원 <a href="#"></a></span>
 	 				<div>
 	 					<a href="#"></a>
 			 			<span>1/5</span>
@@ -63,7 +95,7 @@
 	 		<div id="recomend">
 	 			<div>
 	 				<div>
-		 				<span>얼큰한 맛<a href="#">▼</a></span>
+		 				<span>얼큰한맛 <a href="#">▼</a></span>
 		 				<span>메뉴<br>추천드려요</span>
 		 				<span><a href="#">로그인</a>하시면 고객님의 구매내역과<br> 맛취향에 따라 딱맞는 맛있는 메뉴를 추천드려요</span>
 		 			</div>
@@ -175,8 +207,8 @@
 	 				<span>속초식 코다리찜</span>
 	 				<span>
 						재료가 워낙 좋으니 생선이라도 비린내 걱정
-						<br>없이 맛있었어요. 나가서 사먹는 것보다
-						<br>내 집에서 믿고 먹는 맛집, 쿡킷입니다!
+						<br>없이 맛있었어요.나가서 사먹는것보다
+						<br>내 집에서 믿고먹는 맛집, 쿡킷입니다!
 					</span>
 					<span></span>
 	 				<span>by.for********</span>
@@ -196,7 +228,7 @@
 					<h2>쿡킷 메뉴보기<br>
 					Premium Mealkit</h2>
 					<span>
-					장보기, 재료 손질, 레시피 검색 <strong>번거로움 OUT!</strong><br>
+					장보기, 재료손질, 레시피검색 <strong>번거로움 OUT!</strong><br>
 					초간편함은 물론, 완벽한 맛 쿡킷이 다~ 했네
 					</span>
 					<ul>
@@ -444,5 +476,8 @@
 			 		</div>
 			 	</div>
 		</footer>
+		<div class="modal">
+	       <div class="modal_body"></div>
+	    </div>
 	</body>
 </html>
