@@ -13,9 +13,9 @@
 <meta name="description" content="JARDIN SHOP" />
 <meta name="keywords" content="JARDIN SHOP" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scaleable=no" />
-<link rel="stylesheet" type="text/css" href="../css/reset_HS.css?v=Y" />
-<link rel="stylesheet" type="text/css" href="../css/layout_HS.css?v=Y" />
-<link rel="stylesheet" type="text/css" href="../css/content_HS.css?v=Y" />
+<link rel="stylesheet" type="text/css" href="css/reset_HS.css?v=Y" />
+<link rel="stylesheet" type="text/css" href="css/layout_HS.css?v=Y" />
+<link rel="stylesheet" type="text/css" href="css/content_HS.css?v=Y" />
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src="../js/top_navi.js"></script>
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 <!--header start-->
 	<div style="width:100%;">
-	<iframe src="header.jsp" frameborder="0" scrolling="no" width="100%" height="290px" style="margin:auto;"></iframe>
+	<iframe src="html/header.jsp" frameborder="0" scrolling="no" width="100%" height="290px" style="margin:auto;"></iframe>
   	</div>
 <!--header end-->
 	
@@ -332,7 +332,7 @@ $(document).ready(function() {
 
 <!--footer start-->
 	<div style="width:100%; height:100%; margin-top:70px;">
-	<iframe src="footer.jsp" frameborder="0" scrolling="no" width="100%" height="500px" style="margin:auto;"></iframe>
+	<iframe src="html/footer.jsp" frameborder="0" scrolling="no" width="100%" height="500px" style="margin:auto;"></iframe>
   	</div>
 <!--footer end-->
 
