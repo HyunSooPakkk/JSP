@@ -20,6 +20,7 @@
     		if(confirm("게시글을 삭제하시겠습니까?")){
     			location.href="n_delete.do?page=${page}&bno=${bdto.bno}&category=${category}&sword=${sword}";
     		}
+    		
     	});
     });
   </script>

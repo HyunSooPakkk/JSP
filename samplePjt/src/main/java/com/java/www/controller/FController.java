@@ -31,6 +31,7 @@ public class FController extends HttpServlet {
 		String url = null;
 		Service service = null;
 		
+		
 		//파일이름 추출
 		String uri = request.getRequestURI();
 		String cPath = request.getContextPath();

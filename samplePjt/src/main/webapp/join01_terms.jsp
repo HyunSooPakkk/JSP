@@ -21,6 +21,7 @@
 					return false;
 				}
 				
+				
 				alert("다음으로 진행합니다.");
 				agreeFrm.submit();
 			 }); 

@@ -31,6 +31,7 @@ public class MyLikeUpdate extends HttpServlet {
 		System.out.println("MyLikeUpdate bno : "+bno);
 		System.out.println("MyLikeUpdate like_status : "+like_status);
 		
+		
 		//service접근
 		//MyLikeUpdateService MyLikeUpdateService = new MyLikeUpdateService();
 		

@@ -33,7 +33,6 @@ public class IdCheck extends HttpServlet {
 		writer.print(result); //리턴값
 		writer.close();
 		
-		
 	}//
 	
 	//-----------------
