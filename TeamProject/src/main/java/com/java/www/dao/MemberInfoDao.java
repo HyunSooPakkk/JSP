@@ -144,7 +144,7 @@ public class MemberInfoDao {
 	
 	
 	//회원정보 수정 - 비밀번호 수정 저장
-	public void mPwUpdate(String memberid2, String mempw2) {
+	public int mPwUpdate(String memberid2, String mempw2) {
 	try {
 		conn = getConnection();
 		query = "update memberInfo set mempw=? where memberid=?";
@@ -154,7 +154,7 @@ public class MemberInfoDao {
 		System.out.println("dao memberid: "+memberid2);
 		System.out.println("dao mempw2: "+mempw2);
 	
-		pstmt.executeUpdate();
+		result = pstmt.executeUpdate();
 	} catch (Exception e) {e.printStackTrace();
 	}finally {
 		try {
@@ -163,7 +163,7 @@ public class MemberInfoDao {
 			if(conn != null) conn.close();
 		} catch (Exception e2) {e2.printStackTrace();}
 	}
-		
+	return result;	
 	}//mPwUpdate
 
 	

@@ -116,8 +116,9 @@ $(document).ready(function() {
 							url: "../PwChange",
 							type:"post",
 							data:{"memberid":id,"mempw":pw},
-							//datatype:"json",
+							datatype:"json",
 							success: function(data){
+								console.log(data);
 								alert("비밀번호가 변경되었습니다.");
 								$("#pwchange").val("");//비밀번호 input창 글삭제
 							},
