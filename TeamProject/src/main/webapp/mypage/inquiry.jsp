@@ -64,11 +64,9 @@ $(document).ready(function() {
 				<div id="mypage">
 					<h2><strong style="font-family: 'JeonjuCraftGoR' !important;">1:1문의</strong><span style="font-family: 'JeonjuCraftGoR' !important;">삼식세끼 서비스에 궁금하신 사항을 남겨주시면 답변해드립니다.</span></h2>
 					
-					
-
 
 					<div class="orderDivNm">
-						<table summary="NO, 종류, 적립포인트, 적립날짜, 상태 순으로 현재 적립된 포인트를 조회 하실수 있습니다." class="orderTable2" border="1" cellspacing="0">
+						<table summary="1:1 문의 내역을 조회하실 수 있습니다." class="orderTable2" border="1" cellspacing="0">
 							<caption style="font-family: 'JeonjuCraftGoR' !important;">적립내역 보기</caption>
 							<colgroup>
 							<col width="9%" class="tnone" />
@@ -144,9 +142,24 @@ $(document).ready(function() {
 
 					<div class="btnAreaList">
 						
-						<div class="bwright">
+						<div class="bwrite">
 							<ul>
-								<li><a href="#" class="writeBtn" style="font-family: 'JeonjuCraftGoR' !important;">글쓰기</a></li>
+							
+							<script>
+							     $(function(){
+							    	$("#writeBtn").click(function(){
+							    		if("${session_memberId}"==""){
+							    			alert("로그인을 하셔야 글쓰기가 가능합니다. 로그인을 해주세요.");
+							    			return false;
+							    		}
+							    		location.href="doLogin.do"; //Integration V2의 doLogin
+							    	});
+							</script>
+							
+								<li>
+								<a href="#" class="writeBtn" id="writeBtn" name="writeBtn"
+								style="font-family: 'JeonjuCraftGoR' !important;">글쓰기</a>
+								</li>
 							</ul>
 						</div>
 
@@ -170,13 +183,23 @@ $(document).ready(function() {
 							<ul>
 								<li class="web"><img src="../images/txt/txt_search.gif" alt="search" /></li>
 								<li class="se" style="font-family: 'JeonjuCraftGoR' !important;">
-									<select>
-										<option value="" />제목</option>
-									</select>
+								<select><option value="" />제목</option></select>
 								</li>
 								<li><input type="text" class="searchInput" /></li>
-								<li class="web"><a href="#"><img src="../images/btn/btn_search.gif" alt="검색" /></a></li>
-								<li class="mobile"><a href="#"><img src="../images/btn/btn_search_m.gif" alt="검색" /></a></li>
+								
+								<script>
+								$("#sBtn").click(function(){
+						    		if($("#searchInput").val()==""){
+						    			alert("검색어를 입력하셔야 합니다.");
+						    			$("#searchInput").focus();
+						    			return false;
+						    		}
+						    		//searchFrm.submit();
+						    	});
+								</script>
+								
+								<li class="web" input type="text" id="sBtn" name="sBtn"><a href="#"><img src="../images/btn/btn_search.gif" alt="검색" /></a></li>
+								<li class="mobile" input type="text" id="sBtn" name="sBtn"><a href="#"><img src="../images/btn/btn_search_m.gif" alt="검색" /></a></li>
 							</ul>
 						</div>
 					</div>

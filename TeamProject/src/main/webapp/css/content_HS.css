@@ -732,8 +732,8 @@
 .orderCenter li{float:left; padding:0 5px;}
 .bRight{float:right; margin:0 5px 0 0;}
 .bRight li{float:left; padding:0 0 0 10px;}
-.bwright{position:absolute; right:0; top:-3px; margin:0 0 0 5px;}
-.bwright li{float:left; padding:0 0 0 10px;}
+.bwrite{position:absolute; right:0; top:-3px; margin:0 0 0 5px;}
+.bwrite li{float:left; padding:0 0 0 10px;}
 
 .cartarea{width:510px; margin:30px auto 0;}
 .cartarea li{float:left; width:160px; padding:0 5px;}
@@ -1064,8 +1064,8 @@ span.searchStyleSelectBox.changed{background-color: #fff;}
 /* BTN AREA */
 .btnArea{width:auto;}
 .btnAreaList{width:auto;}
-.bwright{position:relative; top:0; width:100%; padding:15px 0 0 0; overflow:hidden;}
-.bwright ul{float:right; margin:0 3px 0 0;}
+.bwrite{position:relative; top:0; width:100%; padding:15px 0 0 0; overflow:hidden;}
+.bwrite ul{float:right; margin:0 3px 0 0;}
 .orderCenter{width:290px;}
 .orderCenter li{padding:0 2px;}
 
