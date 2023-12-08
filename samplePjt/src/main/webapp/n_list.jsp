@@ -82,9 +82,9 @@
           <c:forEach var="c" begin="1" end="${bdto.bindent}" step="1" >▶</c:forEach>
           <a href="n_view.do?page=${page}&bno=${bdto.bno}&category=${category}&sword=${sword}">${bdto.btitle}</a>
         </td>
-        <td>${bdto.id }</td>
+        <td>${bdto.id}</td>
         <td><fmt:formatDate value="${bdto.bdate}" pattern="yyyy-MM-dd"/></td>
-        <td>${bdto.bhit }</td>
+        <td>${bdto.bhit}</td>
       </tr>
       </c:forEach>
       <!-- 반복끝 -->
@@ -102,7 +102,7 @@
       <c:forEach var="n" begin="${startPage}" end="${endPage}" step="1">
         <c:if test="${page==n}">
           <li class="num txtOn">
-           <div> ${n}</div>
+           <div>${n}</div>
           </li>
         </c:if>
         <c:if test="${page!=n}">
@@ -111,10 +111,10 @@
            </li>
         </c:if>
       </c:forEach>
-      <c:if test="${page<maxPage }">
+      <c:if test="${page<maxPage}">
         <a href="n_list.do?page=${page+1}&category=${category}&sword=${sword}"><li class="next"></li></a>
       </c:if>
-      <c:if test="${page>=maxPage }">
+      <c:if test="${page>=maxPage}">
         <li class="next"></li>
       </c:if>
       <a href="n_list.do?page=${maxPage}&category=${category}&sword=${sword}"><li class="last"></li></a>
