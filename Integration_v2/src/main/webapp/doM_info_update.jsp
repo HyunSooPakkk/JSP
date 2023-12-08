@@ -10,13 +10,13 @@
 	<body>
 	<c:if test="${result==1}">
 		<script>
-			alert("회원정보 수정 성공.");
+			alert("회원정보 수정을 성공했습니다.");
 			location.href = "main.do";
 		</script>
 	</c:if>
 	<c:if test="${result!=1}">
 		<script>
-			alert("회원정보 수정 실패");
+			alert("회원정보 수정을 실패했습니다.");
 			location.href = "change_info.do";
 		</script>
 	</c:if>

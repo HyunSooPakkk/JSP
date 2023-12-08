@@ -33,9 +33,14 @@ public class PwChange extends HttpServlet {
 		
 		//dao 접근: 저장 
 		MemberInfoDao mdao = new MemberInfoDao();
-		mdao.mPwUpdate(memberId, mempw);
+		int result = mdao.mPwUpdate(memberId, mempw);
 		
-		
+		//jsp페이지로 정보전송
+		response.setCharacterEncoding("utf-8");
+		PrintWriter writer = response.getWriter();
+
+		writer.print(result);
+		writer.close();
 		
 		
 		
