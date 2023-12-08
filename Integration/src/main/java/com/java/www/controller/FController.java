@@ -35,8 +35,9 @@ public class FController extends HttpServlet {
 		System.out.println("파일호출 이름 : "+fileName);
 		
 		//switch
+		//코드 작성자가 가공해서 요청하는 uri이기 때문에 앞에 "/" 붙여줘야 함.
 		switch(fileName) {
-		case "html/main.do":
+		case "/html/main.do":  
 			response.sendRedirect("main.jsp");
 			break;
 		
