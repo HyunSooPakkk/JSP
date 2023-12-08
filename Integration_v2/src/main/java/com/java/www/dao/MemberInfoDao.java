@@ -105,8 +105,9 @@ public class MemberInfoDao {
 				rs = pstmt.executeQuery();
 				if(rs.next()) {
 					memberId = rs.getString("memberId");
-					System.out.println("selectOne memberId  : "+memberId );
+					System.out.println("selectOne memberId  : "+memberId);
 					NicName = rs.getString("NicName");
+					System.out.println("selectOne NicName  : "+NicName);
 					mempw = rs.getString("mempw");
 					address = rs.getString("address");
 					birthday = rs.getTimestamp("birthday");
@@ -194,14 +195,14 @@ public class MemberInfoDao {
 		
 		
 		//회원정보 수정 - 비밀번호 수정 저장
-		public void mPwUpdate(String memberid2, String mempw2) {
+		public void mPwUpdate(String memberId2, String mempw2) {
 		try {
 			conn = getConnection();
 			query = "update memberInfo set mempw=? where memberid=?";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, mempw2);
-			pstmt.setString(2, memberid2);
-			System.out.println("dao memberid: "+memberid2);
+			pstmt.setString(2, memberId2);
+			System.out.println("dao memberid: "+memberId2);
 			System.out.println("dao mempw2: "+mempw2);
 		
 			pstmt.executeUpdate();

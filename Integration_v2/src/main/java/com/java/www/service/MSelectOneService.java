@@ -16,12 +16,12 @@ public class MSelectOneService implements Service {
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		//ID 가져오기
 		HttpSession session = request.getSession();
-		//String memberid = (String) session.getAttribute("session_id");
-		String memberid = "aaa";
+		String memberId = (String)session.getAttribute("session_memberId");
+		//String memberid = "aaa";
 		
 		//dao 접근
 		MemberInfoDao mdao = new MemberInfoDao();
-		MemberInfoDto mdto = mdao.selectOne(memberid);
+		MemberInfoDto mdto = mdao.selectOne(memberId);
 		System.out.println("execute mdto: "+mdto.getNicName());
 		
 		//format

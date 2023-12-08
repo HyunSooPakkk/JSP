@@ -15,9 +15,8 @@ public class MUpdateService implements Service {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
-		String memberid = (String) session.getAttribute("session_memberId");
-		//String memberid = request.getParameter("memberid");
-		System.out.println("MUpdateService memberid: "+memberid);
+		String memberId = (String) session.getAttribute("session_memberId");
+		System.out.println("MUpdateService memberId: "+memberId);
 		
 		String nicname = request.getParameter("nicname");
 		String mempw = request.getParameter("mempw");
@@ -40,7 +39,7 @@ public class MUpdateService implements Service {
 	    System.out.println("MUpdateService birthday: "+birthday);
 		
 		
-		MemberInfoDto mdto = new MemberInfoDto(memberid, nicname, mempw, address, email,  birthday);
+		MemberInfoDto mdto = new MemberInfoDto(memberId, nicname, mempw, address, email, birthday);
 		
 		//dao 접근
 		MemberInfoDao mdao = new MemberInfoDao();
