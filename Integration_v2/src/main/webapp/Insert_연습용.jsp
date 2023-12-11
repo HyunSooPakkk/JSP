@@ -20,7 +20,7 @@
   <meta property="og:description" content="웹사이트입니다">
   <meta property="og:image" content="https://웹사이트/images/opengraph.png">
   <meta property="og:url" content="https://웹사이트">
-  <title>첫페이지 | 팀2</title>
+  <title>현수연습용</title>
   <link rel="stylesheet" href="../resources/css/template.css">
   <link rel="stylesheet" href="../resources/css/style2.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean" rel="stylesheet">
@@ -45,82 +45,85 @@
     <![endif]-->
 <!-- 수정부분  -->    
   <script>
-  		$(function(){
-  			var idConfirm = 0;
-  			//모든 정보 입력하지 않으면 넘어가지 못함.
-  			$("#btn-info").click(function(){
-  				var id = $("#id").val();
-  				var pw = $("#pw").val();
-  				var address = $("#address-1").val();
-  				var email = $("#Email").val();
-  				
-  				if(id,pw,address,email == ""){
-  					alert("회원정보를 모두 입력하셔야 합니다.");
-  					$("#id").focus();
-  					return false;
-  				}else{
-  					alert("정상 입력되었습니다.")
-  				}
-  				mFrm.submit();
-  			});//btn-info
+  	$(function(){
+		var idConfirm = 0;
+		//모든 정보 입력하지 않으면 넘어가지 못함.
+		$("#btn-info").click(function(){
+			var id = $("#id").val();
+			var pw = $("#pw").val();
+			var address = $("#address-1").val();
+			var email = $("#Email").val();
+			
+			if(id,pw,address,email == ""){
+				alert("회원정보를 모두 입력하셔야 합니다.");
+				$("#id").focus();
+				return false;
+			}else{
+				alert("정상 입력되었습니다.")
+			}
+			mFrm.submit();
+		});//btn-info
   			
-  		 //상점등록 페이지 이동 버튼	
-  			$("#btn-warning").click(function(){
-  				location.href = "regStore.do";
-  			});//btn-info
+  		//상점등록 페이지 이동 버튼	
+		$("#btn-warning").click(function(){
+			location.href = "regStore.do";
+		});//btn-info
   	     
-  			//아이디 중복 체크
-  			$("#idChkBtn").click(function(){
-  				alert("아이디를 중복체크합니다.");
-  				var id = $("#id").val();
-  				$.ajax({
-  					url:"IdCheck",
-  					type:"post",
-  					data:{"id":id},
-  					dataType:"text",
-  					success:function(data){
-  						if(data == '사용가능'){
-  							$("#txtIdChk").text("사용 가능한 아이디입니다.");
-  							$("#txtIdChk").addClass("txtOff");
-  							$("#txtIdChk").removeClass("txtOn");
-  							idConfirm = 1;
-  							
-  						}else{
-  							$("#txtIdChk").text("사용 불가능한 아이디입니다.");
-  							$("#txtIdChk").removeClass("txtOff");
-  							$("#txtIdChk").addClass("txtOn");
-  							idConfirm = 0;
-  						}
-  						console.log("받은 결과값 : "+data)
-  					},
-  					error:function(){
-  						alert("실패");
-  						
-  					}
-  					
-  				});//ajax
-  				
-  			});//idChkBtn
-  			
+  		//아이디 중복 체크
+  		$("#idChkBtn").click(function(){
+			alert("아이디를 중복체크합니다.");
+			var id = $("#id").val();
+			
+			//Ajax으로 아이디 중복체크
+			$.ajax({
+				url: "IdCheck",
+				type: "post",
+				data: {"id":id},
+				dataType: "text",
+				success:function(data){
+					if(data == '사용 가능'){
+						$("#txtIdChk").text("사용 가능한 아이디입니다.");
+						$("#txtIdChk").addClass("txtOff");
+						$("#txtIdChk").removeClass("txtOn");
+						idConfirm = 1;
+						
+					}else{
+						$("#txtIdChk").text("사용 불가능한 아이디입니다.");
+						$("#txtIdChk").removeClass("txtOff");
+						$("#txtIdChk").addClass("txtOn");
+						idConfirm = 0;
+					}
+					console.log("받은 결과값: "+data);
+				},
+				error:function(){
+					alert("실패");
+				}
+					
+				
+				
+			})//Ajax
+			
+  		});//idChkBtn
+  		
   			
   			//비밀번호 비교
-  		  	$("#Password2").keyup(function(){
+  			$("#Password2").keyup(function(){
   				if($("#pw").val() != $("#Password2").val()){
   					$("#txtPw").text("비밀번호가 일치하지 않습니다.");
-					$("#txtPw").addClass("txtOn");
+  					$("#txtPw").addClass("txtOn");
   					$("#txtPw").removeClass("txtOff");
   				}else{
-  					$("#txtPw").text("비밀번호가 일치합니다.");
-  					$("#txtPw").addClass("txtOff");
-					$("#txtPw").removeClass("txtOn");
+  					$("txtPw").text("비밀번호가 일치합니다.");
+  					$("txtPw").addClass("txtOff");
+  					$("txtPw").removeClass("txtOn");
   				}
   				
-  			});//Password2	
-
+  				
+  			});//Password2
   			
   		
   		//주소
-  		$("#addressSearch").click(function(){
+		$("#addressSearch").click(function(){
 			new daum.Postcode({
 				oncomplete: function(data){
 					$("#address-1").val(data.zonecode);
